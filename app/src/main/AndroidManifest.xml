@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DEKUTAPP">
         <activity
+            android:name=".NavigationDrawerActivity"
+            android:exported="true" />
+        <activity
             android:name=".ContactActivity"
             android:exported="true" />
         <activity

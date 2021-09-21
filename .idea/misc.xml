@@ -8,9 +8,15 @@
         <entry key="app/src/main/res/layout/activity_contact.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/activity_navigation_drawer.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_news.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/content_navigation_drawer.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/menu/navigation_drawer.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/menu/option_menu.xml" value="0.17708333333333334" />
       </map>
     </option>

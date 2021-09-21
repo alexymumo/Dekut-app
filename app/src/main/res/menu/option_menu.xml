@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/settings"
-        android:icon="@drawable/dekut"/>
-    <item
-        android:id="@+id/login"/>
-    <item
-        android:id="@+id/register"/>
-    <item
-        android:id="@+id/logout"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/news"
+            android:icon="@drawable/ic_baseline_add_new"
+            android:title="@string/news"/>
+        <item
+            android:id="@+id/about"
+            android:title="@string/about_us"
+            android:icon="@drawable/ic_baseline_info"/>
+    </group>
 
+    <item
+        android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/contact_us"
+                android:title="@string/contact_us"
+                android:icon="@drawable/dekut"/>
+            <item
+                android:id="@+id/share"
+                android:title="@string/share"
+                android:icon="@drawable/ic_baseline_share_24"/>
+        </menu>
+    </item>
 </menu>

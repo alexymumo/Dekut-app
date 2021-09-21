@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DEKUT APP</string>
+    <string name="email">Enter your email</string>
+    <string name="password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="dont_have_an_account_sign_up">Dont have an account? Sign Up</string>
+    <string name="year">Year</string>
+    <string name="course">Course</string>
+    <string name="registration_number">Registration Number</string>
+    <string name="name">Name</string>
+    <string name="student_email">Student Email</string>
+    <string name="register">Register</string>
+    <string name="have_an_account_already_sign_in">Have an account already? Sign in</string>
+    <string name="splash">DEKUT APP</string>
+    <string name="title">Title</string>
+    <string name="send_message">Send Message</string>
+    <string name="contact_us">Contact Us</string>
+</resources>

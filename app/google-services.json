@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "508043209564",
+    "firebase_url": "https://houses-f6b32-default-rtdb.firebaseio.com",
+    "project_id": "houses-f6b32",
+    "storage_bucket": "houses-f6b32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508043209564:android:8894d29d9d2e93e254ef99",
+        "android_client_info": {
+          "package_name": "com.example.dekutapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508043209564-flk8t1e3ngc993312cgmuh28r8onufrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf2IQWl9v5jYxyMfsEBTPZ-KQcWR3xLrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508043209564-flk8t1e3ngc993312cgmuh28r8onufrv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508043209564:android:6cd6d15541ea518254ef99",
+        "android_client_info": {
+          "package_name": "com.example.houses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508043209564-flk8t1e3ngc993312cgmuh28r8onufrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf2IQWl9v5jYxyMfsEBTPZ-KQcWR3xLrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508043209564-flk8t1e3ngc993312cgmuh28r8onufrv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508043209564:android:35c02f9b6e354acd54ef99",
+        "android_client_info": {
+          "package_name": "com.example.realestate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508043209564-flk8t1e3ngc993312cgmuh28r8onufrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf2IQWl9v5jYxyMfsEBTPZ-KQcWR3xLrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508043209564-flk8t1e3ngc993312cgmuh28r8onufrv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

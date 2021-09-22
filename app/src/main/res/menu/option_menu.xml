@@ -20,7 +20,7 @@
             <item
                 android:id="@+id/contact_us"
                 android:title="@string/contact_us"
-                android:icon="@drawable/dekut"/>
+                android:icon="@drawable/ic_baseline_chat_24"/>
             <item
                 android:id="@+id/share"
                 android:title="@string/share"

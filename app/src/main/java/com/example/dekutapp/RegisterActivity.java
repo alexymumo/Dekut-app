@@ -1,6 +1,7 @@
 package com.example.dekutapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -43,6 +44,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         year = findViewById(R.id.year);
         password = findViewById(R.id.password);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Register here");
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.show();
+
+        //progress bar configuration
+       /* progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Please wait");
+        progressDialog.setMessage("Creating your account");
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCancelable(false);
+        progressDialog.show()*/
+
         binding.registerUser.setOnClickListener(this);
         binding.registerTextView.setOnClickListener(this);
 
@@ -80,7 +95,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         } else if (TextUtils.isEmpty(year_text)) {
             binding.year.setError("Enter year of study");
             binding.year.requestFocus();
-        } else if (TextUtils.isEmpty(password_text) && password_text.length() < 1) {
+        } else if (TextUtils.isEmpty(password_text) && password_text.length() >= 6) {
             binding.password.setError("Enter your password");
             binding.password.requestFocus();
         } else if (TextUtils.isEmpty(reg_text)) {
@@ -130,16 +145,4 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
 
   /*init the action bar
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Register here");
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.show();
-
-        //progress bar configuration
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Please wait");
-        progressDialog.setMessage("Creating your account");
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.setCancelable(false);
-        progressDialog.show();*/
+   ;*/

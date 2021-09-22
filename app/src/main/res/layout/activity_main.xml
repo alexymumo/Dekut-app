@@ -38,7 +38,7 @@
     <EditText
         android:id="@+id/password"
         android:textColor="@color/black"
-        android:inputType="numberPassword"
+        android:inputType="textPassword"
         android:layout_below="@+id/email"
         android:layout_marginTop="40dp"
         android:textAllCaps="false"

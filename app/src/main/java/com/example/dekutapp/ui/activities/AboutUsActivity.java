@@ -1,8 +1,10 @@
-package com.example.dekutapp;
+package com.example.dekutapp.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.dekutapp.R;
 
 public class AboutUsActivity extends AppCompatActivity {
 

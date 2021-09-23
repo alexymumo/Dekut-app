@@ -8,7 +8,7 @@
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
     android:paddingRight="10dp"
-    tools:context=".RegisterActivity">
+    tools:context=".ui.activities.RegisterActivity">
 
     <ImageView
         android:id="@+id/registerImageView"
@@ -127,7 +127,8 @@
     <TextView
         android:id="@+id/registerTextView"
         android:layout_marginTop="20dp"
-        android:ems="10"
+        android:ems="1"
+        android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
         android:textSize="20sp"
         android:textAlignment="center"

@@ -6,7 +6,7 @@
     android:theme="@style/Theme.Design.NoActionBar"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context=".SplashActivity">
+    tools:context=".ui.activities.SplashActivity">
 
     <TextView
         android:text="@string/splash"

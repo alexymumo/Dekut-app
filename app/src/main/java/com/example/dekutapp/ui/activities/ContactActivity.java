@@ -1,4 +1,4 @@
-package com.example.dekutapp;
+package com.example.dekutapp.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

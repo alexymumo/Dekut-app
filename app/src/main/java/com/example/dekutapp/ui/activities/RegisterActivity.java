@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.dekutapp.R;
-import com.example.dekutapp.data.User;
+import com.example.dekutapp.data.models.User;
 import com.example.dekutapp.databinding.ActivityRegisterBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 

@@ -1,4 +1,4 @@
-package com.example.dekutapp.data;
+package com.example.dekutapp.data.models;
 
 public class User {
     public String  email, regno, name, course,year;

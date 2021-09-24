@@ -3,6 +3,7 @@ package com.example.dekutapp.ui.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
 
 
 import android.app.ProgressDialog;
@@ -111,8 +112,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            User user = new User();
 
-                            User user = new User(reg_text, email_text, password_text, course_text, name_text);
+                            //User user = new User(reg_text, email_text, password_text, course_text, name_text);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -131,7 +133,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             });
                         } else {
                             Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
-                            //progres
                         }
                     }
                 });

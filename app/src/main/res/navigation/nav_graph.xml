@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashActivity">
+
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.dekutapp.ui.activities.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.dekutapp.ui.activities.RegisterActivity"
+        android:label="RegisterActivity" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.dekutapp.ui.activities.LoginActivity"
+        android:label="LoginActivity" />
+</navigation>

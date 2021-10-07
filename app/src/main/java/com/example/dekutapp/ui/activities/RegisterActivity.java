@@ -3,7 +3,6 @@ package com.example.dekutapp.ui.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
 
 
 import android.app.ProgressDialog;
@@ -16,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.dekutapp.R;
-import com.example.dekutapp.data.models.User;
+import com.example.dekutapp.model.User;
 import com.example.dekutapp.databinding.ActivityRegisterBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 
@@ -49,19 +48,19 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         year = findViewById(R.id.year);
         password = findViewById(R.id.password);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Register here");
-        actionBar.setDisplayShowHomeEnabled(true);
         //actionBar.show();
 
         //progress bar configuration
-       progressDialog = new ProgressDialog(this);
+        progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Please wait");
         progressDialog.setMessage("Creating your account");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setCancelable(false);
-       // progressDialog.show();
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Login here");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.show();
 
         binding.registerUser.setOnClickListener(this);
         binding.registerTextView.setOnClickListener(this);
@@ -81,59 +80,55 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         });
     }
     private void registerUser() {
-        String email_text = email.getText().toString().trim();
-        String password_text = password.getText().toString().trim();
-        String name_text = name.getText().toString().trim();
-        String course_text = course.getText().toString().trim();
-        String year_text = year.getText().toString().trim();
-        String reg_text = regno.getText().toString().trim();
+        String email_text = binding.email.getText().toString().trim();
+        String password_text = binding.password.getText().toString().trim();
+        String name_text = binding.name.getText().toString().trim();
+        String course_text = binding.course.getText().toString().trim();
+        String year_text = binding.year.getText().toString().trim();
+        String reg_text = binding.regno.getText().toString().trim();
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email_text).matches()) {
             binding.email.setError("Invalid email format");
             binding.email.requestFocus();
-        } else if (TextUtils.isEmpty(name_text)) {
-            binding.course.setError("Enter your course");
+        }
+        if (TextUtils.isEmpty(name_text)) {
+            binding.course.setError("Required!!");
             binding.course.requestFocus();
-        } else if (TextUtils.isEmpty(course_text)) {
-            binding.name.setError("Enter your name");
+        }
+        if (TextUtils.isEmpty(course_text)) {
+            binding.name.setError("Required!!");
             binding.name.requestFocus();
-        } else if (TextUtils.isEmpty(year_text)) {
-            binding.year.setError("Enter year of study");
+        }
+        if (TextUtils.isEmpty(year_text)) {
+            binding.year.setError("Required!!");
             binding.year.requestFocus();
-        } else if (TextUtils.isEmpty(password_text) && password_text.length() >= 6) {
-            binding.password.setError("Enter your password");
+        }
+        if (TextUtils.isEmpty(password_text) && password_text.length() >= 6) {
+            binding.password.setError("Required!!");
             binding.password.requestFocus();
-        } else if (TextUtils.isEmpty(reg_text)) {
-            binding.regno.setError("Registration required");
+        }
+        if (TextUtils.isEmpty(reg_text)) {
+            binding.regno.setError("Required");
             binding.regno.requestFocus();
         }
         firebaseAuth.createUserWithEmailAndPassword(email_text, password_text)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            User user = new User();
-
-                            //User user = new User(reg_text, email_text, password_text, course_text, name_text);
-
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        User user = new User(reg_text, email_text, password_text, course_text, name_text);
+                        FirebaseDatabase.getInstance().getReference("Users")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .setValue(user).addOnCompleteListener(task1 -> {
+                                    if (task1.isSuccessful()) {
                                         Toast.makeText(RegisterActivity.this, "Registered User successfully", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-                                        progressDialog.show();
+                                        //progressDialog.show();
                                     } else {
                                         Toast.makeText(RegisterActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
-                                        progressDialog.dismiss();
+                                        //progressDialog.dismiss();
                                     }
-                                }
-                            });
-                        } else {
-                            Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
-                        }
+                                });
+                    } else {
+                        Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -146,7 +141,3 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         return super.onSupportNavigateUp();
     }
 }
-
-
-  /*init the action bar
-   ;*/

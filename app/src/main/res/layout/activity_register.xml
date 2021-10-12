@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,12 +13,14 @@
         android:id="@+id/registerImageView"
         android:src="@drawable/dekut"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription" />
 
     <EditText
         android:id="@+id/name"
         android:maxLines="1"
         android:ems="10"
+        android:autofillHints="name"
         android:textSize="20sp"
         android:fontFamily="sans-serif-medium"
         android:hint="@string/name"
@@ -34,6 +35,7 @@
         tools:ignore="ContentDescription" />
     <EditText
         android:maxLines="1"
+        android:autofillHints="name"
         android:textSize="20sp"
         android:ems="10"
         android:id="@+id/regno"
@@ -50,6 +52,7 @@
     <EditText
         android:maxLines="1"
         android:ems="10"
+        android:autofillHints="name"
         android:textSize="20sp"
         android:id="@+id/course"
         android:inputType="text"
@@ -76,7 +79,8 @@
         android:inputType="number"
         android:background="@drawable/round_edittext"
         android:layout_width="match_parent"
-        android:layout_height="45dp"/>
+        android:layout_height="45dp"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/email"
@@ -92,12 +96,13 @@
         android:layout_marginStart="10dp"
         android:hint="@string/student_email"
         android:layout_width="match_parent"
-        android:layout_height="45dp"/>
+        android:layout_height="45dp"
+        android:importantForAutofill="no" />
     <EditText
         android:layout_below="@+id/email"
         android:background="@drawable/round_edittext"
         android:id="@+id/password"
-        android:hint="Password"
+        android:hint="@string/password"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:ems="10"
@@ -106,7 +111,8 @@
         android:inputType="textPassword"
         android:layout_marginTop="20sp"
         android:layout_width="match_parent"
-        android:layout_height="45dp"/>
+        android:layout_height="45dp"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/registerUser"

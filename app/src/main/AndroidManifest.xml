@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DEKUTAPP">
         <activity
+            android:name=".ui.activities.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.AboutUsActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.activities.ResetPassword"
             android:exported="true" />
         <activity

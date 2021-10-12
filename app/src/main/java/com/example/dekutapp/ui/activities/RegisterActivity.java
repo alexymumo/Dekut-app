@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private ActivityRegisterBinding binding;
     private FirebaseAuth firebaseAuth;
-    private EditText email, regno, name, course, year, password;
+    EditText email, regno, name, course, year, password;
     private ProgressDialog progressDialog;
 
 

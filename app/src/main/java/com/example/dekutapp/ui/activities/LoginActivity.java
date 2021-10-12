@@ -84,7 +84,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void loginUser() {
-
+  //FirebaseAuth.getInstance().getCurrentUser().getUid();
+                     //firebaseAuth
     }
     @Override
     public boolean onSupportNavigateUp(){

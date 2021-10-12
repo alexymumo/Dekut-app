@@ -1,6 +1,6 @@
 package com.example.dekutapp.ui.activities;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;

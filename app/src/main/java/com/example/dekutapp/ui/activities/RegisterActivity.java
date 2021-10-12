@@ -1,6 +1,5 @@
 package com.example.dekutapp.ui.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,10 +16,7 @@ import android.widget.Toast;
 import com.example.dekutapp.R;
 import com.example.dekutapp.model.User;
 import com.example.dekutapp.databinding.ActivityRegisterBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
 
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -121,7 +117,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                     if (task1.isSuccessful()) {
                                         Toast.makeText(RegisterActivity.this, "Registered User successfully", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-                                        //progressDialog.show();
+                                        progressDialog.show();
                                     } else {
                                         Toast.makeText(RegisterActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
                                         //progressDialog.dismiss();

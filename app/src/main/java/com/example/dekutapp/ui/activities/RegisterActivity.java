@@ -19,6 +19,7 @@ import com.example.dekutapp.databinding.ActivityRegisterBinding;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
@@ -115,16 +116,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                 .setValue(user).addOnCompleteListener(task1 -> {
                                     if (task1.isSuccessful()) {
-                                        Toast.makeText(RegisterActivity.this, "Registered User successfully", Toast.LENGTH_SHORT).show();
+                                        FancyToast.makeText(this, "Registered successfully", FancyToast.LENGTH_SHORT,FancyToast.SUCCESS, true);
+                                        //Toast.makeText(RegisterActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                                         progressDialog.show();
                                     } else {
-                                        Toast.makeText(RegisterActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                                        //Toast.makeText(RegisterActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                                        FancyToast.makeText(this, "Registration failed", FancyToast.LENGTH_SHORT, FancyToast.ERROR, true);
                                         //progressDialog.dismiss();
                                     }
                                 });
                     } else {
-                        Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                        FancyToast.makeText(this, "Registration failed", FancyToast.LENGTH_SHORT, FancyToast.ERROR, true);
+                        //progressDialog.dismiss();
+                        //Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

@@ -9,12 +9,13 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Toast;
+
 
 import com.example.dekutapp.databinding.ActivityLoginBinding;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -78,7 +79,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 finish();
             }).addOnFailureListener(e -> {
                 //progressDialog.dismiss();
-                Toast.makeText(LoginActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                FancyToast.makeText(this, "Login successfully", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true);
+                //progressDialog.dismiss();
+                //Toast.makeText(LoginActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
             });
         });
     }

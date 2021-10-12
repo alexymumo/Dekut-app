@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">DEKUT APP</string>
     <string name="email">Enter your email</string>
-    <string name="password">Enter your password</string>
+    <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="dont_have_an_account_sign_up">Dont have an account? Sign Up</string>
     <string name="year">Year</string>
@@ -41,4 +41,5 @@
     <string name="send_reset_link">Send Reset Link</string>
     <string name="about">About</string>
     <string name="home">Home</string>
+    <string name="better_life_through_technology">Better Life through Technology</string>
 </resources>

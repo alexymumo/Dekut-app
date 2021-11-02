@@ -3,6 +3,9 @@
     package="com.example.dekutapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+   
+
 
     <application
         android:allowBackup="true"
@@ -11,29 +14,9 @@
         android:roundIcon="@drawable/dekut"
         android:supportsRtl="true"
         android:theme="@style/Theme.DEKUTAPP">
+
         <activity
-            android:name=".ui.activities.ProfileActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.AboutUsActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.ResetPassword"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.NewsActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.RegisterActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.SplashActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>

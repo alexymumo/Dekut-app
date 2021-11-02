@@ -1,15 +1,33 @@
-package com.example.dekutapp.model;
+package com.example.dekutapp.data.entity;
 
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "user_table")
 public class User {
-   // public String uid;
-    private String uid, email, regno, name, course,year;
+    @PrimaryKey(autoGenerate = true)
+    private int uid;
 
+    @ColumnInfo(name = "email")
+    private String email;
+
+    @ColumnInfo(name = "regno")
+    private String regno;
+
+    @ColumnInfo(name = "name")
+    private String name;
+
+    @ColumnInfo(name = "course")
+    private String course;
+
+    @ColumnInfo(name = "year")
+    private String year;
     public User(){
 
     }
-    public User(String uid, String name, String year, String regno, String email){
+    public User(int uid, String name, String year, String regno,String course, String email){
         this.name = name;
         this.year = year;
         this.regno = regno;
@@ -17,6 +35,8 @@ public class User {
         this.course = course;
         this.uid = uid;
     }
+
+
 
     public String getCourse() {
         return course;
@@ -34,8 +54,12 @@ public class User {
         return regno;
     }
 
-    public String getUid() {
+    public int getUid() {
         return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
     public String getYear() {
@@ -62,7 +86,6 @@ public class User {
         this.year = year;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
+
+
 }

@@ -8,7 +8,7 @@
     android:paddingBottom="10dp"
     android:paddingRight="10dp"
     android:paddingTop="10dp"
-    tools:context=".ui.activities.AboutUsActivity">
+    tools:context=".ui.fragments.AboutFragment">
 
     <ImageView
         android:id="@+id/imageview"

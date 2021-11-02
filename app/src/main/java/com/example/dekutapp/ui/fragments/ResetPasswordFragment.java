@@ -10,10 +10,14 @@ import android.view.ViewGroup;
 
 import com.example.dekutapp.R;
 
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link ResetPasswordFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class ResetPasswordFragment extends Fragment {
 
-public class AboutUsFragment extends Fragment {
-
-    public AboutUsFragment() {
+    public ResetPasswordFragment() {
         // Required empty public constructor
     }
 
@@ -28,6 +32,6 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about_us, container, false);
+        return inflater.inflate(R.layout.fragment_reset_password, container, false);
     }
 }

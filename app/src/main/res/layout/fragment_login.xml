@@ -7,7 +7,7 @@
     android:paddingBottom="10dp"
     android:paddingTop="10dp"
     android:paddingLeft="10dp"
-    tools:context=".ui.activities.LoginActivity">
+    tools:context=".ui.fragments.LoginFragment">
 
     <ImageView
         android:layout_marginTop="20dp"
@@ -121,4 +121,5 @@
         android:layout_below="@+id/forgotPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 </RelativeLayout>
